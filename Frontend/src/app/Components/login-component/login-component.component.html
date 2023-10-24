@@ -1,0 +1,29 @@
+<body>
+  <div class="login-container">
+    <h1 class="login-heading">Login</h1>
+    <div>
+      <form
+        class="login-form"
+        [formGroup]="checkoutForm"
+        (ngSubmit)="onSubmit()"
+      >
+        <input
+          class="form-input"
+          formControlName="email"
+          type="text"
+          placeholder="Your Email"
+          required
+        />
+
+        <input
+          class="form-input"
+          type="password"
+          formControlName="Password"
+          placeholder="Password"
+          required
+        />
+        <button class="login-button" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>

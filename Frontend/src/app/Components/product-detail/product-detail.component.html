@@ -1,0 +1,33 @@
+<div class="container" *ngIf="Food">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{ Food.imageUrl }}" class="img-fluid" alt="{{Food.imageUrl}}" />
+      </div>
+      <div class="col-md-6">
+        <h1>{{ Food.name }}</h1>
+        <div
+          class="star-rating"
+          style="display: flex; justify-content: space-between"
+        >
+          <div>
+            <p class="star-rating"></p>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+            <span class="star">&#9733;</span>
+          </div>
+          <div>
+            <!-- <p>{{ product.rating.count }}</p> -->
+          </div>
+        </div>
+        <p class="lead">{{ Food.description }}</p>
+        <h3>Price: ${{ Food.price }}</h3>
+        <p>Available in various sizes and colors.</p>
+        <button class="btn btn-primary" (click)="addToCart()">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  

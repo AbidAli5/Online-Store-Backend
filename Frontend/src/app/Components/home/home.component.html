@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="product-card col-12 col-md-8" *ngFor="let food of foods">
+      <img
+        class="product-image img-fluid"
+        [src]="food.imageUrl"
+        alt="{{ food.name }}"
+      />
+      <div class="favorite">
+        <span class="favorite {{ food.favorite ? '' : 'not' }}">⭐</span>
+        <div class="star-rating">
+          <span class="star-icon">★★★✰✰</span>
+        </div>
+        <div class="product-title text-md">{{ food.name }}</div>
+        <div class="product-price text-md">
+          Price: {{ food.price | currency }}
+        </div>
+        <div class="cook">
+          <button
+            class="product-button text-md"
+            routerLink="/Food/{{ food.id }}"
+          >
+            Add to Cart
+          </button>
+          <div class="cookTime text-md">
+            <span>⏰</span>
+            {{ food.cookTime }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

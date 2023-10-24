@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="header-container">
+    <div class="logo" routerLink="">
+      <a routerLink="">TrendFlaunt</a>
+    </div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Categories</a></li>
+    </ul>
+    <div class="search-bar">
+      <input
+        #s
+        type="text"
+        class="search-input"
+        placeholder="Search..."
+        (keyup.enter)="search(s.value)"
+        [value]="searchTerm"
+      />
+      <button class="search-button" (click)="search(s.value)">Search</button>
+    </div>
+    <ul>
+      <li *ngIf="!Auth">
+        <a routerLink="/login">Login</a>
+      </li>
+      <li class="menu-container" *ngIf="Auth">
+        <a routerLink="/dashboard">{{user.name}}</a>
+        <div class="menu">
+          <a routerLink="/profile">Profile</a>
+          <a routerLink="/orders">Orders</a>
+          <a routerLink="/logout" (click)="logout()">Logout</a>
+        </div>
+      </li>
+      <li>
+        <a routerLink="/cart-page">
+          Cart <span></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

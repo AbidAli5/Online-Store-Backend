@@ -1,0 +1,52 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #232f3e;
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 14px;
+  }
+  
+  /* Style the container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: sticky;
+    bottom: 0;
+  }
+  
+  /* Style the columns within the footer */
+  .footer-column {
+    padding: 0 20px;
+  }
+  
+  /* Style the column headers */
+  .footer-column h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the links within the columns */
+  .footer-column ul {
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  /* Add some hover effect to the links */
+  .footer-column ul li a:hover {
+    text-decoration: underline;
+  }
